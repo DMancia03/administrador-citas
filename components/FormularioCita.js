@@ -147,7 +147,7 @@ const FormularioCita = ({ citas, setCitas,  guardarMostrarForm, guardarCitasStor
                                     cancelTextIOS="Cancelar"
                                     confirmTextIOS="Confirmar"
                                 />
-                                <Text>{fecha}</Text>
+                                <Text style={styles.datetimeValue}>{fecha}</Text>
                             </View>
                             {/* Hora */}
                             <View>
@@ -163,7 +163,7 @@ const FormularioCita = ({ citas, setCitas,  guardarMostrarForm, guardarCitasStor
                                     cancelTextIOS="Cancelar"
                                     confirmTextIOS="Confirmar"
                                 />
-                            <Text>{hora}</Text>
+                            <Text style={styles.datetimeValue}>{hora}</Text>
                             </View>
                             {/* Sintomas */}
                             <View>
@@ -201,14 +201,19 @@ const styles = StyleSheet.create({
     label: {
         fontWeight: 'bold',
         fontSize: 18,
-        marginTop: 20
+        marginTop: 20,
+        color:'white'
     },
     input: {
         marginTop: 10,
         height: 50,
         borderColor: '#e1e1e1',
         borderWidth: 1,
-        borderStyle: 'solid'
+        borderStyle: 'solid',
+        backgroundColor:'white'
+    },
+    datetimeValue:{
+        color:'white'
     },
     btnSubmit: {
         padding: 10,
