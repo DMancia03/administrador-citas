@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, View, TouchableHighlight } from 'react-native';
+import { Card } from 'react-native-elements';
 
 const Cita = ({item, eliminarPaciente}) => {
 
@@ -10,11 +11,10 @@ const Cita = ({item, eliminarPaciente}) => {
 
 
     return (
-        <View style={styles.cita}>
-            <View>
-                <Text style={styles.label}>Paciente: </Text>
-                <Text style={styles.texto}>{item.paciente}</Text>
-            </View>
+        <>
+        <Card>
+            <Card.Title>Paciente: {item.paciente}</Card.Title>
+            <Card.Divider/>
             <View>
                 <Text style={styles.label}>Propietario: </Text>
                 <Text style={styles.texto}>{item.propietario}</Text>
@@ -23,14 +23,13 @@ const Cita = ({item, eliminarPaciente}) => {
                 <Text style={styles.label}>Síntomas: </Text>
                 <Text style={styles.texto}>{item.sintomas}</Text>
             </View>
-
             <View>
                 <TouchableHighlight onPress={ () => dialogoEliminar(item.id) } style={styles.btnEliminar}>
                     <Text style={styles.textoEliminar}> Eliminar &times; </Text>
                 </TouchableHighlight>
             </View>
-            
-        </View>
+        </Card>
+        </>
     )
 }
 
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
     label: {
         fontWeight: 'bold',
         fontSize: 18,
-        marginTop: 20
+        marginTop: 10
     },
     texto: {
         fontSize: 18,
