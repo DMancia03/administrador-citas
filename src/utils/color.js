@@ -1,4 +1,4 @@
 export default{
-    PRIMARY_COLOR: '#1181BF',
-    BUTTON_COLOR: '#FFEF36',
+    PRIMARY_COLOR: '#023059',
+    BUTTON_COLOR: '#038C5A',
 }
